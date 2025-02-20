@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status de Entrega - Confirmação</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0052CC;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 30px 20px;
+            background-color: #ffffff;
+        }
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0052CC;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .tracking-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pedido Entregue à Transportadora</h1>
+        </div>
+        
+        <div class="content">
+            <p>Olá {nome_cliente},</p>
+            
+            <p>Ótimas notícias! Seu pedido #{numero_pedido} foi entregue à transportadora e está a caminho.</p>
+            
+            <div class="tracking-info">
+                <h3>Informações do Envio:</h3>
+                <p><strong>Número de Rastreamento:</strong> {codigo_rastreamento}</p>
+                <p><strong>Transportadora:</strong> {nome_transportadora}</p>
+                <p><strong>Previsão de Entrega:</strong> {data_previsao_entrega}</p>
+            </div>
+
+            <p>Detalhes do pedido:</p>
+            <ul>
+                <li>Data do pedido: {data_pedido}</li>
+                <li>Valor total: {valor_total}</li>
+                <li>Endereço de entrega: {endereco_entrega}</li>
+            </ul>
+
+            <center>
+                <a href="{link_rastreamento}" class="button">ACOMPANHAR PEDIDO</a>
+            </center>
+
+            <p>Para acompanhar seu pedido em tempo real, clique no botão acima ou copie e cole o código de rastreamento no site da transportadora.</p>
+
+            <p>Caso tenha alguma dúvida, não hesite em nos contatar respondendo a este e-mail ou através dos nossos canais de atendimento.</p>
+
+            <p>Agradecemos pela sua preferência!</p>
+
+            <p>Atenciosamente,<br>
+            Equipe {nome_empresa}</p>
+        </div>
+
+        <div class="footer">
+            <p>Este é um e-mail automático, por favor não responda.</p>
+            <p>{nome_empresa} - {endereco_empresa}</p>
+            <p><a href="{link_politica_privacidade}">Política de Privacidade</a> | <a href="{link_termos_uso}">Termos de Uso</a></p>
+        </div>
+    </div>
+</body>
+</html>
